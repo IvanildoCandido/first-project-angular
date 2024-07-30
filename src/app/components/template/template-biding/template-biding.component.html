@@ -1,2 +1,17 @@
-<h2>Nome: {{ name }}</h2>
-<h2>Idade: {{ age }}</h2>
+<h3>Text interpolation</h3>
+<p>Idade: {{ age }}</p>
+<h3>Property binding</h3>
+<button [disabled]="disabled">{{ title }}</button>
+<h3>Attribute binding</h3>
+<p [attr.aria-label]="title">Ivanildo Cândido</p>
+<h3>Class and Style binding</h3>
+<p [class.red-color]="age < 18">{{ legend }}</p>
+<p [style.font-weight]="styleBold">{{ legend }}</p>
+<h3>Event binding</h3>
+<button (click)="operation('+')">+</button>
+<button (click)="operation('-')">-</button>
+<div class="box" (mousemove)="onMouseMove($event)"></div>
+<p>{{ coordinates }}</p>
+<h3>Two-way binding</h3>
+<input [(ngModel)]="name" />
+<span>{{name}}</span>
